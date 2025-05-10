@@ -16,7 +16,7 @@ public class PomodoroController : ControllerBase
     public class StartPomodoroRequest
     {
         public int DurationInMinutes { get; set; }
-    }
+    } 
     [HttpPost("start")]
     public async Task<IActionResult> StartPomodoro([FromBody] StartPomodoroRequest request)
     {
