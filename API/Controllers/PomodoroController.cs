@@ -1,5 +1,6 @@
 using Application.Commands;
 using Application.Queries;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers;
 
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class PomodoroController : ControllerBase
 {
     private readonly IMediator _mediator;
